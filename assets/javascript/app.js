@@ -39,6 +39,9 @@ $("button").on("click", function() {
 				var imgDiv = $("<img data-state='still'>");
 				var rateDiv = $("<p>");
 				var personImage = imgDiv.attr("src", urlStill);
+				imgDiv.attr("data-still", urlStill);
+				imgDiv.attr("data-animated", urlAnimated);
+				var dataAnimated
 				var rating = rateDiv.text(response.data[i].rating);
 				$(".gif-container").prepend(personImage);
 				
@@ -47,11 +50,15 @@ $("button").on("click", function() {
 			}
 
 
+
+
 			$("img").on("click", function() {
 
-
+					var urlAnimated = $(this).attr("data-animated");
+					var urlStill = $(this).attr("data-still");
 
 					console.log($(this).attr("data-state"));
+					console.log($(this).attr("data-state") === "animated");
 					if ($(this).attr("data-state") === "still") {
 						$(this).attr("src", urlAnimated);
 						$(this).attr("data-state", "animated");
@@ -59,7 +66,7 @@ $("button").on("click", function() {
 
 					}
 
-					if ($(this).attr("data-state") === "animated") {
+					else {
 						$(this).attr("src", urlStill);
 						$(this).attr("data-state", "still");
 
