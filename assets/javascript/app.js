@@ -46,13 +46,15 @@ alert("clicked");
 
 				var imgDiv = $("<img data-state='still'>");
 				var rateDiv = $("<p>");
+				var divBox = $("<div>");
 				var personImage = imgDiv.attr("src", urlStill);
 				imgDiv.attr("data-still", urlStill);
 				imgDiv.attr("data-animated", urlAnimated);
 				var dataAnimated
 				var rating = rateDiv.text("rating: " + response.data[i].rating);
-				$(".gif-container").prepend(personImage);				
-				$(".gif-container").prepend(rating);
+				divBox.append(personImage);				
+				divBox.prepend(rating);
+				$(".gif-container").prepend(divBox);
 
 			}
 
