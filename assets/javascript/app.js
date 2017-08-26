@@ -2,22 +2,30 @@ var buttonArray = ["The Moon Walk", "Vogue", "The Hustle", "The Sprinkler", "Cha
 var url;
 var container = $(".button-container");
 
+ $(document).ready(function() {
 for (var i = 0; i < buttonArray.length; i++) {
 
-	var btn = $("<button class='btn'>"); 
+	var btn = $("<button class='btn dance'>"); 
 	btn.attr("data-dance", buttonArray[i]);
-	// btn.attr("data-state", "animated");
 	var btnDisplay = btn.text(buttonArray[i]);
-
 	container.append(btnDisplay);
 }
 
+$(".add").on("click", function() {
+	var input = $("#dance-input").val();
+	buttonArray.push(input);
+	var btn = $("<button class='btn dance'>"); 
+	var lastIndex = buttonArray[buttonArray.length - 1];
+	btn.attr("data-dance", lastIndex);
+	var btnDisplay = btn.text(lastIndex);
+	container.append(btnDisplay);
+
+});
 
 
+$(".dance").on("click", function() { 
 
-$("button").on("click", function() { 
-
-
+alert("clicked");
 
 	var dance = $(this).attr("data-dance");
 
@@ -42,42 +50,37 @@ $("button").on("click", function() {
 				imgDiv.attr("data-still", urlStill);
 				imgDiv.attr("data-animated", urlAnimated);
 				var dataAnimated
-				var rating = rateDiv.text(response.data[i].rating);
-				$(".gif-container").prepend(personImage);
-				
+				var rating = rateDiv.text("rating: " + response.data[i].rating);
+				$(".gif-container").prepend(personImage);				
 				$(".gif-container").prepend(rating);
-
 			}
-
-
-
 
 			$("img").on("click", function() {
 
-					var urlAnimated = $(this).attr("data-animated");
-					var urlStill = $(this).attr("data-still");
+				var urlAnimated = $(this).attr("data-animated");
+				var urlStill = $(this).attr("data-still");
 
-					console.log($(this).attr("data-state"));
-					console.log($(this).attr("data-state") === "animated");
-					if ($(this).attr("data-state") === "still") {
-						$(this).attr("src", urlAnimated);
-						$(this).attr("data-state", "animated");
+				if ($(this).attr("data-state") === "still") {
+					$(this).attr("src", urlAnimated);
+					$(this).attr("data-state", "animated");
 
+				}
 
-					}
-
-					else {
-						$(this).attr("src", urlStill);
-						$(this).attr("data-state", "still");
-
-					}
+				else {
+					$(this).attr("src", urlStill);
+					$(this).attr("data-state", "still");
+				}
 
 
-				});
+			});
 
 
 	});
 
 });
+
+
+});
+
 
 

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-500: #f9f4d9;
+  --color-primary-600: #e9b6a1;
+  --color-primary-900: #F57F17;
+  --color-secondary-500: #009688;
+  --color-secondary-900: #004D40;
+  --font-primary: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 12px;
+}
+
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding: 0.5rem 1.5rem;
+  background: var(--color-primary-500);
+  color: var(--color-secondary-900);
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: normal;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: background 250ms, box-shadow 250ms;
+  transition: background 250ms, box-shadow 250ms;
+}
+.btn:hover {
+  background: var(--color-primary-600);
+  box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
+}
+.btn:active, .btn:focus {
+  outline: none;
+}
+.btn:active {
+  box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
+}
+
+.btn .text {
+  position: relative;
+  z-index: 2;
+}
+
+

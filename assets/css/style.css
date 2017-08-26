@@ -1,0 +1,17 @@
+body {
+	background-color: pink;
+}
+
+h1 {
+/*	font-family: 'Gloria Hallelujah', cursive;*/
+	font-family: 'Monoton', cursive;
+}
+
+p {
+	font-family: 'Gloria Hallelujah', cursive;
+/*	font-family: 'Monoton', cursive;*/
+}
+
+button {
+	font-family: 'Amatic SC', cursive;
+}
