@@ -5,13 +5,46 @@ body {
 h1 {
 /*	font-family: 'Gloria Hallelujah', cursive;*/
 	font-family: 'Monoton', cursive;
+	font-size: 48pt;
+	padding: 20px;
+	color: #3aff3a;
+	text-shadow: #afe222 1px 1px, #000 2px 2px, #000 3px 3px;
 }
 
 p {
 	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 14pt;
 /*	font-family: 'Monoton', cursive;*/
 }
 
 button {
 	font-family: 'Amatic SC', cursive;
+}
+
+.input-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.gif-container {
+/*	width: 700px;*/
+
+	display: flex;
+	    flex-wrap: wrap;
+	justify-content: center;
+/*	align-items: center;*/
+	padding: 20px;
+}
+
+img {
+	padding: 10px;
+/*	height: 360px;
+	width: 200px;*/
+}
+
+.p {
+	width: 100%;
+	margin: 20px;
 }

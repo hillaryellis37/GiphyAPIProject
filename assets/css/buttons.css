@@ -6,7 +6,7 @@
 }
 
 :root {
-  --color-primary-500: #f9f4d9;
+  --color-primary-500: #8e8d8d;
   --color-primary-600: #e9b6a1;
   --color-primary-900: #F57F17;
   --color-secondary-500: #009688;
@@ -25,7 +25,9 @@ html {
   margin: 10px;
   padding: 0.5rem 1.5rem;
   background: var(--color-primary-500);
-  color: var(--color-secondary-900);
+/*  color: var(--color-secondary-900);*/
+    color: #3aff3a;
+/*      text-shadow: #afe222 1px 1px, #000 2px 2px, #000 3px 3px;*/
   font-family: 'Amatic SC', cursive;
   font-size: 1.4rem;
   font-weight: 400;

@@ -53,7 +53,10 @@ alert("clicked");
 				var rating = rateDiv.text("rating: " + response.data[i].rating);
 				$(".gif-container").prepend(personImage);				
 				$(".gif-container").prepend(rating);
+
 			}
+
+			$(".gif-container").prepend("<p class='p'>Click the images to see them come alive!</p>");
 
 			$("img").on("click", function() {
 
