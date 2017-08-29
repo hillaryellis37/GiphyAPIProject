@@ -23,9 +23,8 @@ $(".add").on("click", function() {
 });
 
 
-$(".dance").on("click", function() { 
+$(".button-container").on("click", "button", function() { 
 
-alert("clicked");
 
 	var dance = $(this).attr("data-dance");
 
