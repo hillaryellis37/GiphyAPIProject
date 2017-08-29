@@ -28,7 +28,7 @@ $(".button-container").on("click", "button", function() {
 
 	var dance = $(this).attr("data-dance");
 
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + dance + "&api_key=dc6zaTOxFJmzC&limit=10";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + dance + "&api_key=dc6zaTOxFJmzC&limit=10";
 
 	$.ajax({
 		url:queryURL, 
