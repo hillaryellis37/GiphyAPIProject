@@ -1,4 +1,4 @@
-var buttonArray = ["The Moon Walk", "Vogue", "The Hustle", "The Sprinkler", "Charleston", "Pop Lock and Drop It", "Grinding", "Twerk", "Crip Walk"];
+var buttonArray = ["The Moon Walk", "Vogue", "The Hustle", "The Sprinkler", "Charleston", "Pop Lock and Drop It", "Grinding", "Twerk", "Crip Walk", "Hip-Hop"];
 var url;
 var container = $(".button-container");
 
